@@ -6,6 +6,8 @@ description: ""
 lectures: 4
 title: "Container Benefits"
 weight: 3
+tags: [conatiners]
+categories: [intermediate]
 ---
 
 

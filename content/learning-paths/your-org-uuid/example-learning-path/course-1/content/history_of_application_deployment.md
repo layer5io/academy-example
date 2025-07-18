@@ -6,6 +6,8 @@ description: ""
 lectures: 4
 title: "History of Application Deployments"
 weight: 4
+tags: [conatiners , deployments]
+categories: [intermediate]
 ---
 
 ### **History of Application Deployments**

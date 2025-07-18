@@ -6,10 +6,12 @@ lectures: 2
 courseTitle: "Why Exoscale SKS?"
 themeColor: "#00B39F"
 order: 6
-cardImage: ""
+banner: "/your-org-uuid/image-1.png"
 toc:
   [
     "scalable-kubernetes-service",
     "packaging-pricing",
   ]
+tags: [sks]
+categories: [advance]
 ---

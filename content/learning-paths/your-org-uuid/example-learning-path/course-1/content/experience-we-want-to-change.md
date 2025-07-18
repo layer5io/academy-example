@@ -6,6 +6,8 @@ description: ""
 lectures: 4
 title: "Experiences we want to change!"
 weight: 1
+tags: [conatiners]
+categories: [intermediate]
 ---
 
 ### **Why Containers?**

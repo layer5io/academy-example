@@ -6,6 +6,8 @@ description: ""
 lectures: 2
 title: "Scalable Kubernetes Service"
 weight: 1
+tags: [sks]
+categories: [advance]
 ---
 
 ### **Scalable, On-demand Kubernetes Cluster**

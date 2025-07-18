@@ -6,6 +6,8 @@ description: ""
 lectures: 2
 title: "Packaging & Pricing"
 weight: 2
+tags: [sks , pricing]
+categories: [advance]
 ---
 
 ### **Packaging & Pricing**

@@ -6,6 +6,8 @@ description: ""
 lectures: 4
 title: "New Ideas & Concepts"
 weight: 2
+tags: [conatiners]
+categories: [intermediate]
 ---
 
 ### **New Ideas & Concepts**
