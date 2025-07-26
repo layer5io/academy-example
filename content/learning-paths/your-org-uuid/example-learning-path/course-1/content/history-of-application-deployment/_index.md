@@ -1,18 +1,15 @@
 ---
-docType: "Chapter"
 id: "History of Application Deployments"
-chapterTitle: "History of Application Deployments"
-description: ""
-lectures: 4
+description: "This section provides an overview of the evolution of application deployment strategies, from traditional methods to modern container-based approaches."
 title: "History of Application Deployments"
 weight: 4
-tags: [conatiners , deployments]
+tags: [containers , deployments]
 categories: [intermediate]
 ---
 
 ### **History of Application Deployments**
 
-![image]({{< usestatic "image-1.png" >}})
+![image](image-1.png)
 
 #### **Traditional Deployment**
 

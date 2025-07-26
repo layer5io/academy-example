@@ -1,8 +1,6 @@
 ---
-docType: "Chapter"
 id: "Scalable Kubernetes Service"
-chapterTitle: "Scalable Kubernetes Service"
-description: ""
+description: "In this section, we explore the features and benefits of Scalable Kubernetes Services (SKS), focusing on how they can enhance the deployment and management of containerized applications in modern IT environments."
 lectures: 2
 title: "Scalable Kubernetes Service"
 weight: 1
@@ -14,7 +12,7 @@ categories: [advance]
 
 Start with a privacy-minded public cloud to host from single applications to complex architectures. Deploy a production-ready cluster in 90 seconds and manage it with a simple web portal, CLI, API or your choice of tools (Terraform).
 
-![image]({{< usestatic "image-1.png" >}})
+![image](image-1.png)
 
 ### **SKS Features**
 
@@ -42,7 +40,7 @@ With a free STARTER version and an affordable PRO plan, SKS provides straightfor
 
 Deploy your cluster where you need to, in the region that suits your latency, privacy or redundancy strategy.
 
-![image]({{< usestatic "image-1.png" >}})
+![image](image-1.png)
 
 
 {{< card 

@@ -1,12 +1,9 @@
 ---
-docType: "Chapter"
 id: "New Ideas & Concepts"
-chapterTitle: "New Ideas & Concepts"
-description: ""
-lectures: 4
+description: "In this section, we explore the innovative concepts that have emerged in the world of containers, drawing parallels with the shipping industry to understand how these ideas can transform IT operations."
 title: "New Ideas & Concepts"
 weight: 2
-tags: [conatiners]
+tags: [containers]
 categories: [intermediate]
 ---
 
@@ -20,7 +17,7 @@ Replication of success is always desirable and sparked a new way of operating IT
 
 Container Technology in the shipping industry Instead of thinking up a separate way of shipping for each product, placing the goods in steel containers designed for pickup by the crane on the dock and fit into the ship is a more efficient way to do transport at scale.
 
-![image]({{< usestatic "image-1.png" >}})
+![image](image-1.png)
 
 In streamlining the processes and the loading of the goods in standardized containers, the goods can be moved as one unit in a space-saving and cost-effective manner.
 
@@ -30,6 +27,6 @@ Container Technology in the IT industry Computer container technology in the IT 
 - reduce dependencies
 - develop, deploy and operate easier
 
-![image]({{< usestatic "image-1.png" >}})
+![image](image-1.png)
 
 In streamlining the processes and the apps' packaging in containers, deploying and running apps as one unit become a more performant and resource-effective process.
