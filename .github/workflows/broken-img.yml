@@ -3,24 +3,21 @@ name: Validating Images
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths:
+      - '**/*.md'
 
 jobs:
   read-markdown:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2  
+          fetch-depth: 1  
 
       - name: validate image formats
         run: |
           changed_files=$(git diff --name-only HEAD^ HEAD | grep '\.md$')
-          
-          if [ -z "$changed_files" ]; then
-            echo "No .md files changed in this PR"
-            exit 0
-          fi
           
           has_invalid_images=false
           
@@ -40,6 +37,7 @@ jobs:
                 fi
                 
                 # Check image path extension (png, jpg, jpeg, gif, svg, webp)
+                
                 if ! echo "$image_path" | grep -qE '\.(png|jpg|jpeg|gif|svg|webp)$'; then
                   echo "::warning file=$file::Invalid or missing image extension in line: $line"
                   has_invalid_images=true
