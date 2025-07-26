@@ -1,0 +1,59 @@
+name: Validating Images
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  read-markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  
+
+      - name: validate image formats
+        run: |
+          changed_files=$(git diff --name-only HEAD^ HEAD | grep '\.md$')
+          
+          if [ -z "$changed_files" ]; then
+            echo "No .md files changed in this PR"
+            exit 0
+          fi
+          
+          has_invalid_images=false
+          
+          for file in $changed_files; do
+            if [ -f "$file" ]; then
+              echo "Checking $file for invalid image lines:"
+              # Find lines in ![alt](image-path) format
+              grep -n -E '!\[.*\]\(.*\)' "$file" | while IFS= read -r line; do
+                # Extract the image path syntax
+                image_path=$(echo "$line" | sed -E 's/.*!\[.*\]\((.*)\).*/\1/')
+                
+                # Check if image path is empty
+                if [ -z "$image_path" ]; then
+                  echo "::warning file=$file::Empty image path in line: $line"
+                  has_invalid_images=true
+                  continue
+                fi
+                
+                # Check image path extension (png, jpg, jpeg, gif, svg, webp)
+                if ! echo "$image_path" | grep -qE '\.(png|jpg|jpeg|gif|svg|webp)$'; then
+                  echo "::warning file=$file::Invalid or missing image extension in line: $line"
+                  has_invalid_images=true
+                fi
+              done
+            else
+              echo "::warning::File $file not found"
+              has_invalid_images=true
+            fi
+          done
+          
+          if [ "$has_invalid_images" = true ]; then
+            echo "Validation failed: Found invalid image formats in Markdown files"
+            exit 1
+          else
+            echo "All image formats are valid"
+          fi
