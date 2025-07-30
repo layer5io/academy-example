@@ -9,6 +9,7 @@ replace github.com/FortAwesome/Font-Awesome v4.7.0+incompatible => github.com/Fo
 
 require (
 	github.com/FortAwesome/Font-Awesome v4.7.0+incompatible // indirect
-	github.com/layer5io/academy-theme v0.1.20 // indirect
+	github.com/google/docsy v0.12.0 // indirect
+	github.com/layer5io/academy-theme v0.1.27 // indirect
 	github.com/twbs/bootstrap v5.3.7+incompatible // indirect
 )
