@@ -1,0 +1,120 @@
+<div class="academy-summary">
+    <h3>Welcome to dev environment for your Academy</h3>
+    <p>
+        The Layer5 Cloud Academy is a modular learning management system (LMS) designed for building learning paths and
+        interactive, hands-on challenges. It is deeply integrated into the Layer5 cloud ecosystem and Kanvas — a visual
+        designer for cloud native infrastructure. This integration allows you to embed live visualizations, interactive
+        designs, and contextual experiences directly into your courses.
+    </p>
+    <div>
+        <h4>Things to Keep in Mind</h4>
+        <ul>
+            <li>The content will be published to <a href="https://cloud.layer5.io/academy/"
+                    target="_blank">cloud.layer5.io/academy</a> only after a release is made in the Academy Repository.
+            </li>
+            <li>The preview you see here uses default theme colors. On <a href="https://cloud.layer5.io/academy"
+                    target="_blank">cloud.layer5.io/academy</a>, styles will match your organisation's selected theme.
+            </li>
+            <li>
+                It’s a good practice to update the theme before creating a new release or when you notice that your
+                local preview is missing recent design changes.
+            </li>
+        </ul>
+    </div>
+    <div class="example">
+        <h4>Academy Example</h4>
+        <p>
+            The
+            <a href="https://github.com/layer5io/academy-example">academy-example</a>
+            is a starter template for creating custom learning paths and courses on the Layer5 Academy. It provides the
+            necessary file structure and a working example to help you get started quickly.
+        </p>
+    </div>
+    <div class="theme">
+        <h4>Academy Theme</h4>
+        The
+        <a href="https://github.com/layer5io/academy-theme">academy-theme</a>
+        provides the core layout, style, and features for your learning path. Regularly updating it ensures you benefit
+        from
+        the latest improvements and bug fixes.
+        <p>
+            Latest Academy Theme Version: <span id="theme-version">Loading...</span>
+        </p>
+        <p>
+            To upgrade to the latest theme version, run: <code>make theme-update</code>
+        </p>
+    </div>
+
+    <div class="structure">
+        <h4>Academy Structure</h4>
+        <h5>Core Directories</h5>
+        Now, inside your academy-example project, you should see the following top-level folders.
+        <ul>
+            <li>
+                <strong>content/learning-paths/your-organization-uid/</strong> This content directory is where all your
+                written
+                material lives.
+                The
+                folder hierarchy you create here directly defines the navigation and organization of your learning
+                paths.
+            </li>
+            <li>
+                <strong>layouts/shortcodes/your-organization-uid/</strong> This layouts directory is for advanced use.
+                You can
+                place custom
+                Hugo
+                Shortcodes here if you need special reusable components.
+            </li>
+        </ul>
+        <h5>Content Hierarchy</h5>
+        <pre><code>
+    learning-paths/
+    └── mastering-kubernetes/                    // <-- Learning Path
+        ├── _index.md                            
+        ├── advanced-networking/                 // <-- Course 1
+        │   └── _index.md                        
+        └── core-concepts/                       // <-- Course 2
+            ├── _index.md   
+            ├── course-exam.md                   // <-- Course Exam (Test)                     
+            └── 01-pods-and-services/            // <-- Module
+                ├── _index.md                    
+                ├── 01-pods.md                   // <-- Page 1
+                ├── 02-services.md               // <-- Page 2
+                ├── 03-knowledge-check.md        // <-- Test
+                ├── 04-hands-on-lab.md           // <-- Lab
+                └── arch.png                     // <-- Image
+    </code></pre>
+        <p>The _index.md file within a folder is crucial as it defines the metadata for that level.</p>
+        <h5>Front matter</h5>
+        <p>
+            Front matter is the configuration block at the top of every content file that defines its metadata. The most
+            critical field is type, which tells the Academy how to render the content.
+        </p>
+
+    </div>
+    <p>
+        <strong>Need help?
+            <a href="https://docs.layer5.io/cloud/academy/" target="_blank">
+                Documentation
+            </a>|
+            <a href="https://mesheryio.slack.com/ssb/redirect" target="_blank">
+                Contact Us
+            </a>
+        </strong>
+    </p>
+</div>
+
+<script>
+    async function fetchThemeVersion() {
+        const res = await fetch("https://api.github.com/repos/layer5io/academy-theme/releases/latest");
+        const data = await res.json();
+
+        if (res.ok) {
+            document.getElementById("theme-version").textContent = data.tag_name || data.name;
+        } else {
+            document.getElementById("theme-version").textContent = "Could not fetch version";
+        }
+    }
+
+    // fetchThemeVersion();
+</script>
