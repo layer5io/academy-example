@@ -1,6 +1,6 @@
 ---
 title: "Module Quiz"
-passing_percentage: 70
+pass_percentage: 70
 questions:
   - id: "q1"
     text: "Which Layer5 project is used for visual design in Kubernetes and cloud native infrastructure?"
