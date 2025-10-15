@@ -22,13 +22,10 @@ title: Academy
 
 #### What Your Academy Will Look Like
 
-> When published, your Academy will feature two main sections ([This Page looks like](https://cloud.layer5.io/academy/)
+> When published, your Academy will look like ([This Page](https://cloud.layer5.io/academy/) and will feature **Learning Paths, Challenges, and Certifications**.
 )
 
-> - **[Learning Paths](/academy/learning-paths/)** - Structured courses combining theoretical knowledge with hands-on labs  
-> 
-> - **[Challenges](/academy/challenges/)** - Time-based, practical labs to test and validate skills
-
+> It provides structured, Markdown-authored curricula with hands-on practice and assessments. Content is organized hierarchically and supports rich media.
 
 #### Build Process
 
