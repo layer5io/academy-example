@@ -10,17 +10,29 @@ tags: [cloud, infrastructure]
 level: "beginner"
 categories: "platform"
 
+# Added badge frontmatter
+badge:
+  svg: "image.png"
+  png: "image.png"
+  title: "Certification-1 Badge"
+  description: "Earn this badge by completing Certification-1."
 
+# Added certificate frontmatter
+certificate:
+  title: "Certification-1"
+  description: "Awarded upon successful completion of Certification-1, validating foundational understanding of KEDA and related infrastructure concepts."
+  issuing_authorities:
+    - name: "Layer5 Academy"
+      role: "Maintainers"
+      signature_url: "https://github.com/leecalcote/talks/blob/master/img/five-avatar-circle.png"
 
 # Table of content covered in the test
-# Each domain can have a weightage (percentage) and subdomains (items)
-# Weightage should sum up to 100 across all domains ( not strictly enforced, but recommended )
 competencies:
   - title: "Domain 1"
-    percentage: 10 # Weightage of this domain in the test
+    percentage: 10
     items: 
-       -  "Subdomain 1"
-       -  "Subdomain 2"
+       - "Subdomain 1"
+       - "Subdomain 2"
 
   - title: "Domain 2"
     percentage: 30
@@ -34,21 +46,16 @@ competencies:
       - "Subdomain 1"
       - "Subdomain 2"
 
-
-
 # List of resource that are recommended to complete before taking the test
-# Not strictly enforced, but recommended
 prerequisite_knowledge:
   - title: "Learning Path"
     children:
       - title: "Cloud Computing Basics"
         link: "https://academy-domain.com/learning-paths/cloud-computing-basics"
-      - title: "Basic knowledge of Linux command line
+      - title: "Basic knowledge of Linux command line"
         link: "https://linuxcommand.org/"
       - title: "Basic Certification: Networking Basics"
         link: "https://academy-domain.com/certifications/networking-basics" 
-  
-
 
 # List of additional resources for further reading 
 related_resources:
@@ -77,6 +84,4 @@ additional_attributes:
   - title: "Labs"
     value: "Mandatory"
     description: "Hands-on labs included"
-
-
 ---
