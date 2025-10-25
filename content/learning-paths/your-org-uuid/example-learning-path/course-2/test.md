@@ -36,6 +36,16 @@ questions:
     text: "Which tool manages Kubernetes namespace labeling?" 
     type: "short-answer" 
     marks: 2
-    correct_answer: "kubectl" 
+    correct_answer: "kubectl"
+  - id: "q4"
+    text: "True or False: Kubernetes Services provide load balancing for pods."
+    type: "true-false"
+    marks: 1
+    answer: true
+  - id: "q5"
+    text: "True or False: All Kubernetes resources must be created in the default namespace."
+    type: "true-false"
+    marks: 1
+    answer: false
 type: "test"
 ---
