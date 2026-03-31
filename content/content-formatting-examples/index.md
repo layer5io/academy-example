@@ -5,7 +5,13 @@ description: A collection of examples for formatting content, from basic Markdow
 draft: true
 ---
 
-Welcome! This page showcases examples of Hugo shortcodes, images, and Markdown.
+The Layer5 Academy platform supports a wide range of shortcodes for enriching your learning content. Shortcodes are reusable template snippets you invoke in Markdown files to generate HTML output. They come from three sources:
+
+1. **Academy Theme** — custom shortcodes built specifically for the Academy platform.
+2. **Docsy Theme** — shortcodes inherited from the [Google Docsy](https://www.docsy.dev/) documentation theme.
+3. **Hugo Built-in** — shortcodes included with the [Hugo](https://gohugo.io/) static site generator.
+
+For guidance on creating your own shortcodes, see [Extending the Academy](/cloud/academy/creating-content/extending-the-academy/).
 
 {{< alert type="note" title="Example Page: Not for Production" >}}
 This page will not be published in the [production version](https://cloud.layer5.io/academy/) of the site. It is only visible for local preview and serves as a reference. You can safely delete this page from your repository at any time.
