@@ -43,7 +43,7 @@ prerequisite_knowledge:
     children:
       - title: "Cloud Computing Basics"
         link: "https://academy-domain.com/learning-paths/cloud-computing-basics"
-      - title: "Basic knowledge of Linux command line
+      - title: "Basic knowledge of Linux command line"
         link: "https://linuxcommand.org/"
       - title: "Basic Certification: Networking Basics"
         link: "https://academy-domain.com/certifications/networking-basics" 
