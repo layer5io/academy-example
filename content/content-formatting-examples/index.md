@@ -196,7 +196,7 @@ This is a superscript number for your footnote. [^1]
 The shortcodes below are ported from the [Hextra Hugo theme](https://imfing.github.io/hextra/docs/guide/shortcodes/) and adapted to work with Bootstrap 5. They are all namespaced under `hextra/` to avoid conflicts with Academy, Docsy, and Hugo built-in shortcodes.
 
 {{< hextra/callout type="info" >}}
-All Hextra shortcodes use the **angle-bracket** syntax `{{</* */>}}` (not the percent syntax `{{%/* */%}}`). This ensures raw HTML output is preserved correctly.
+All Hextra shortcodes use the **angle-bracket** delimiter syntax (not the percent delimiter syntax). This ensures raw HTML output is preserved correctly. See the usage examples below for the correct invocation pattern.
 {{< /hextra/callout >}}
 
 ### Callout
