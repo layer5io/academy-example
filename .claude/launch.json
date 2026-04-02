@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "hugo-dev",
+      "runtimeExecutable": "/usr/local/bin/hugo",
+      "runtimeArgs": ["server", "-D", "--port", "1314"],
+      "port": 1314,
+      "env": {
+        "PATH": "/usr/local/go/bin:/usr/local/bin:/usr/bin:/bin"
+      }
+    }
+  ]
+}
