@@ -23,10 +23,9 @@ GIT_STRIPPED_VERSION=$(shell git describe --tags `git rev-list --tags --max-coun
 REMOTE_PROVIDER="Layer5"
 
 LOCAL_PROVIDER="None"
-GOVERSION = 1.23
+GOVERSION = 1.25.5
 GOPATH = $(shell go env GOPATH)
 GOBIN  = $(GOPATH)/bin
-KEYS_PATH="../../server/permissions/keys.csv"
 
 SHELL := /usr/bin/env bash -o pipefail
 
@@ -36,7 +35,7 @@ SHELL := /usr/bin/env bash -o pipefail
 # All Adapters
 # ADAPTER_URLS := "localhost:10000 localhost:10001 localhost:10002 localhost:10004 localhost:10005 localhost:10006 localhost:10007 localhost:10009 localhost:10010 localhost:10012"
 # No Adapters
-ADAPTER_URLS := "localhost:10000 localhost:10001 localhost:10012 localhost:10013"
+# ADAPTER_URLS := "localhost:10000 localhost:10001 localhost:10012 localhost:10013"
 
 #-----------------------------------------------------------------------------
 # Providers (Add your provider here. See https://docs.meshery.io/extensibility/providers)
