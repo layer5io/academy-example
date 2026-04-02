@@ -1,10 +1,23 @@
 ---
 title: TabPanel
 linkTitle: TabPanel
-
+weight: 13
 description: Example of tabpane and tab used as a content component.
 draft: true
 ---
+
+```text
+{{</* tabpane text=true */>}}
+  {{%/* tab header="Example 1" lang="en" active="true" */%}}
+  First tab content.
+  {{</* /tab */>}}
+  {{%/* tab header="Example 2" lang="en" */%}}
+  Second tab content.
+  {{</* /tab */>}}
+{{</* /tabpane */>}}
+```
+
+**Example:**
 
 {{< tabpane text=true >}}
 

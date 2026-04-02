@@ -1,10 +1,18 @@
 ---
 title: Blocks Section and Feature
 linkTitle: Blocks Section + Feature
-
+weight: 5
 description: Render the Docsy blocks/section and blocks/feature shortcodes together.
 draft: true
 ---
+
+```text
+{{</* blocks/section color="light" type="container" */>}}
+  {{</* blocks/feature icon="fa-layer-group" title="Title" */>}}Description.{{</* /blocks/feature */>}}
+{{</* /blocks/section */>}}
+```
+
+**Example:**
 
 {{< blocks/section color="light" type="container" >}}
 {{< blocks/feature icon="fa-layer-group" title="Reusable" >}}Use shortcodes to compose reusable content patterns.{{< /blocks/feature >}}
