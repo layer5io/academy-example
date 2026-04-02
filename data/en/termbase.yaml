@@ -1,0 +1,23 @@
+- abbr: API
+  term: Application Programming Interface
+  definition: A set of protocols and tools for building and integrating software applications.
+
+- abbr: CLI
+  term: Command-Line Interface
+  definition: A text-based interface used to interact with software by typing commands.
+
+- abbr: SSG
+  term: Static Site Generator
+  definition: A tool that generates a full static HTML website from raw data and templates.
+
+- abbr: CDN
+  term: Content Delivery Network
+  definition: A geographically distributed network of servers that delivers web content to users based on their location.
+
+- abbr: YAML
+  term: YAML Ain't Markup Language
+  definition: A human-readable data serialization format commonly used for configuration files.
+
+- abbr: CI/CD
+  term: Continuous Integration and Continuous Delivery
+  definition: Development practices that automate building, testing, and deploying code changes.
