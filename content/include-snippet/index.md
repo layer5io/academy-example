@@ -1,7 +1,7 @@
 ---
 title: Includeable Snippet
 draft: true
-_build:
+build:
   list: never
   render: always
 ---
