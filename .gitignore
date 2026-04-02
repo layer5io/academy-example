@@ -17,6 +17,8 @@
 # IDEs
 .vscode/*
 
+.claude/launch.json
+
 # hugo
 public/
 resources/
