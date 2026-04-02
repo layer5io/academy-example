@@ -6,4 +6,4 @@ description: Render the Docsy swaggerui shortcode.
 draft: true
 ---
 
-{{< swaggerui src="examples/openapi/example.json" >}}
+{{< swaggerui src="/examples/openapi/example.json" >}}

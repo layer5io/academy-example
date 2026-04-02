@@ -30,7 +30,7 @@ Tabs help organize related content.
 
 Here is an example image:
 
-![Spruce shoot example image](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg/1024px-Picea_abies_shoot_with_buds%2C_Sogndal%2C_Norway.jpg)
+![Spruce shoot example image](/examples/images/layer5-academy-icon.svg)
 
 {{< /tab >}}
 
