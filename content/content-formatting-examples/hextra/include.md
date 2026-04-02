@@ -9,7 +9,7 @@ draft: true
 Includes the rendered content of another page inline. This shortcode **must** use the percent-delimiter syntax.
 
 ```text
-{{%/* hextra/include "examples/include-snippet" */%}}
+{{%/* hextra/include "include-snippet" */%}}
 ```
 
 **Parameters:**
@@ -20,4 +20,4 @@ Includes the rendered content of another page inline. This shortcode **must** us
 
 **Example (included from a separate page):**
 
-{{% hextra/include "examples/include-snippet" %}}
+{{% hextra/include "include-snippet" %}}
