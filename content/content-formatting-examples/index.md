@@ -522,38 +522,66 @@ Renders an inline SVG icon from `data/hextra/icons.yaml`. Useful for embedding i
 Embeds a PDF file in a responsive iframe.
 
 ```text
-{{</* hextra/pdf "/path/to/sample.pdf" */>}}
+{{</* hextra/pdf "sample.pdf" */>}}
 ```
 
-Supply a valid PDF path (page-bundle resource, asset, or absolute path) to render the embedded viewer.
+**Parameters:**
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| positional | Path to the PDF file (page resource, asset, or absolute path) | _(required)_ |
+
+**Example:**
+
+{{< hextra/pdf "sample.pdf" >}}
 
 ---
 
 ### Include
 
-Includes the rendered content of another page inline. The parameter is the page path (relative to the content directory, without the file extension).
+Includes the rendered content of another page inline. This shortcode **must** use the percent-delimiter syntax.
 
 ```text
-{{%/* hextra/include "page-path" */%}}
+{{%/* hextra/include "include-snippet" */%}}
 ```
+
+**Parameters:**
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| positional | Page path relative to the content directory | _(required)_ |
+
+**Example (included from a separate page):**
+
+{{% hextra/include "include-snippet" %}}
 
 ---
 
 ### Term
 
-Wraps a glossary term in an `<abbr>` tooltip. Definitions are sourced from `data/<lang>/termbase.yaml` (e.g., `data/en/termbase.yaml`).
+Wraps a glossary term in an `<abbr>` tooltip. Hover over the highlighted terms below to see their definitions. Definitions are sourced from `data/<lang>/termbase.yaml`.
 
 ```text
 {{</* hextra/term "API" */>}}
 ```
 
-To use this shortcode, create a termbase data file. For example, `data/en/termbase.yaml`:
+**Parameters:**
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `entry` | Glossary abbreviation or full term (named or positional) | _(required)_ |
+
+To use this shortcode, create a termbase data file at `data/en/termbase.yaml`:
 
 ```yaml
 - abbr: API
   term: Application Programming Interface
   definition: A set of protocols for building software.
 ```
+
+**Examples:**
+
+Hugo is an {{< hextra/term "SSG" >}} that can be controlled via its {{< hextra/term "CLI" >}}. Configuration is written in {{< hextra/term "YAML" >}} and sites are commonly served through a {{< hextra/term "CDN" >}}. Most projects use a {{< hextra/term "CI/CD" >}} pipeline to deploy changes automatically. The theme exposes a rich {{< hextra/term "API" >}} of shortcodes and partials.
 
 ---
 
@@ -562,7 +590,7 @@ To use this shortcode, create a termbase data file. For example, `data/en/termba
 Renders a Jupyter Notebook (`.ipynb`) as code blocks and Markdown cells.
 
 ```text
-{{%/* hextra/jupyter "notebook.ipynb" */%}}
+{{%/* hextra/jupyter "example-notebook.ipynb" */%}}
 ```
 
 **Parameters:**
@@ -572,7 +600,9 @@ Renders a Jupyter Notebook (`.ipynb`) as code blocks and Markdown cells.
 | positional | Path or URL to the `.ipynb` file | _(required)_ |
 | `allowUnsafeHTML` | Set to `"true"` to render raw HTML from notebook outputs | `false` |
 
-Place a `.ipynb` file in the page bundle or `assets/` directory and reference it by name.
+**Example:**
+
+{{% hextra/jupyter "example-notebook.ipynb" %}}
 
 ---
 
@@ -596,7 +626,9 @@ Embeds an [asciinema](https://asciinema.org/) terminal recording player. The pla
 | `poster` | Poster/thumbnail specification | _(none)_ |
 | `markers` | Comma-separated time markers (e.g., `"5:Intro,10:Demo"`) | _(none)_ |
 
-Place a `.cast` file in the page bundle and reference it by name.
+**Example:**
+
+{{< hextra/asciinema file="demo.cast" speed="2" autoplay="true" loop="true" >}}
 
 ---
 
