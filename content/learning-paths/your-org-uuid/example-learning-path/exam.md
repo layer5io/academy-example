@@ -37,5 +37,10 @@ questions:
     type: "short-answer" 
     marks: 2
     correct_answer: "kubectl" 
+  - id: "q4"
+    text: "Meshery is an open source project."
+    type: "true-false"
+    marks: 2
+    correct_answer: true
 type: "test"
 ---
