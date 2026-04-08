@@ -22,4 +22,4 @@ Renders a Jupyter Notebook (`.ipynb`) as code blocks and Markdown cells.
 
 **Example:**
 
-{{% hextra/jupyter "example-notebook.ipynb" filename="analysis.ipynb" %}}
+{{% hextra/jupyter "example-notebook.ipynb" %}}
