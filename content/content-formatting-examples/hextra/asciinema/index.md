@@ -23,7 +23,8 @@ Embeds an [asciinema](https://asciinema.org/) terminal recording player. The pla
 | `loop` | Loop playback | `false` |
 | `poster` | Poster/thumbnail specification | _(none)_ |
 | `markers` | Comma-separated time markers (e.g., `"5:Intro,10:Demo"`) | _(none)_ |
+| `filename` | Optional filename to display as a header | _(none)_ |
 
 **Example:**
 
-{{< hextra/asciinema file="demo.cast" speed="2" autoplay="true" loop="true" >}}
+{{< hextra/asciinema file="demo.cast" speed="2" autoplay="true" loop="true" filename="terminal-session.cast" >}}
