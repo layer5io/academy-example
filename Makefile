@@ -18,18 +18,32 @@ include .github/build/Makefile.show-help.mk
 #----------------------------------------------------------------------------
 # Academy
 # ---------------------------------------------------------------------------
-.PHONY: setup build site clean check-go theme-update
+.PHONY: setup build build-production build-preview site clean check-go theme-update
+
+BASE_URL ?=
 
 ## ------------------------------------------------------------
 ----LOCAL_BUILDS: Show help for available targets
 	
 ## Local: Install site dependencies
 setup:
-	 npm i
+	@if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then \
+		npm ci; \
+	else \
+		npm i; \
+	fi
 
 ## Local: Build site for local consumption
 build:
-	hugo build
+	BASE_URL="$(BASE_URL)" npm run build
+
+## CI: Build production site output
+build-production:
+	BASE_URL="$(BASE_URL)" npm run build:production
+
+## CI: Build preview site output and mark it non-indexable
+build-preview:
+	BASE_URL="$(BASE_URL)" npm run build:preview
 
 ## Local: Build and run site locally with draft and future content enabled.
 site: check-go
