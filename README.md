@@ -5,9 +5,7 @@ This repository offers a starter template for creating your own, dedicated acade
 
 ---
 
-<p align="center">
- 💡ℹ️ FOR IN-DEPTH TUTORIAL AND CUSTOMIZATION EXAMPLES, SEE THE <a href="https://docs.layer5.io/cloud/academy/">LAYER5 ACADEMY DOCS</a>. ℹ️💡
-</p>
+> For in-depth tutorials and customization examples, see the [Layer5 Academy docs](https://docs.layer5.io/cloud/academy/).
 
 ---
 
