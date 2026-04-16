@@ -15,8 +15,8 @@ This repository offers a starter template for creating your own, dedicated acade
 
 Before you begin, ensure you have the following installed on your system:
 
-  1. [**Go**](https://go.dev/doc/install)
-  2. [**Hugo**](https://gohugo.io/getting-started/installing/) (extended version)
+  1. [**Go**](https://go.dev/doc/install) (use the version required by the root `go.mod` file)
+  2. [**Hugo**](https://gohugo.io/getting-started/installing/) (extended version, minimum `0.146.0` as defined in `hugo.yaml`)
 
 ## Getting Started
 
