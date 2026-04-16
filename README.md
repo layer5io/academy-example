@@ -1,7 +1,7 @@
 
 # Layer5 Academy - Content Starter Template
 
-This repository offers a starter template for creating your own, dedicated academy on the [Layer5 Academy](https://cloud.layer5.io/academy/overview) platform. This repository provides the necessary file structure and a working example to help you get started quickly. The guide below offers a quick start to setting up your own content repository, creating cirricula, and previewing your academy locally.
+This repository offers a starter template for creating your own, dedicated academy on the [Layer5 Academy](https://cloud.layer5.io/academy/overview) platform. This repository provides the necessary file structure and a working example to help you get started quickly. The guide below offers a quick start to setting up your own content repository, creating curricula, and previewing your academy locally.
 
 ---
 
