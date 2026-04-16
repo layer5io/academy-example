@@ -18,6 +18,7 @@ Renders a Jupyter Notebook (`.ipynb`) as code blocks and Markdown cells.
 |-----------|-------------|---------|
 | positional | Path or URL to the `.ipynb` file | _(required)_ |
 | `allowUnsafeHTML` | Set to `"true"` to render raw HTML from notebook outputs | `false` |
+| `filename` | Optional filename to display as a header | _(none)_ |
 
 **Example:**
 
