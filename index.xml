@@ -8456,7 +8456,7 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 
 
 &lt;div class="md__image"&gt;
- &lt;img id="[245 302 248 233 133 96]" src="https://layer5io.github.io/academy-example/examples/images/exoscale-icon.png" onclick="openModal(this.id)" alt="Rendered tab image" 
+ &lt;img id="[409 21 346 147 62 407]" src="https://layer5io.github.io/academy-example/examples/images/exoscale-icon.png" onclick="openModal(this.id)" alt="Rendered tab image" 
  class="md-image-responsive" /&gt;
 &lt;/div&gt;&lt;/p&gt;
 
@@ -8651,15 +8651,12 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-html" data-lang="html"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&amp;lt;&lt;span style="color:#f92672"&gt;img&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;src&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;./images/example.png&amp;#34;&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;alt&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Example description&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#a6e22e"&gt;style&lt;/span&gt;&lt;span style="color:#f92672"&gt;=&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;max-width: 40vw; max-height: 60vh; display: block; margin: 1rem auto;&amp;#34;&lt;/span&gt; /&amp;gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Instructor Toolkit</title><link>https://layer5io.github.io/academy-example/instructor-toolkit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://layer5io.github.io/academy-example/instructor-toolkit/</guid><description>&lt;section class="academy-toolkit academy-toolkit--ready"&gt;
- &lt;header class="academy-toolkit__header"&gt;
- &lt;h2&gt;ID Validation&lt;/h2&gt;
- &lt;/header&gt;
 
- &lt;p class="academy-toolkit__verdict academy-toolkit__verdict--good"&gt;&lt;em&gt;Ready to publish to the Academy.&lt;/em&gt;&lt;/p&gt;&lt;p class="academy-toolkit__summary academy-toolkit__summary--good"&gt;
+ &lt;p class="academy-toolkit__verdict academy-toolkit__verdict--good"&gt;Ready to publish&lt;/p&gt;&lt;p class="academy-toolkit__summary academy-toolkit__summary--good"&gt;
  &lt;strong&gt;All publishable content IDs are registered.&lt;/strong&gt;
  &lt;/p&gt;&lt;p class="academy-toolkit__legend"&gt;
- &lt;span&gt;⚠️ Draft page: Content ID is not registered or missing.&lt;/span&gt;
- &lt;span&gt;❌ Content ID is not registered or missing.&lt;/span&gt;
+ &lt;span&gt;&lt;a href="https://cloud.meshery.io/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;⚠️&lt;/a&gt;Draft page: Content ID is not registered or missing.&lt;/span&gt;
+ &lt;span&gt;&lt;a href="https://cloud.meshery.io/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;❌&lt;/a&gt;Content ID is not registered or missing.&lt;/span&gt;
  &lt;span&gt;✅ Content ID is registered.&lt;/span&gt;
  &lt;/p&gt;&lt;table class="academy-toolkit__table"&gt;
  &lt;colgroup&gt;
@@ -8679,22 +8676,21 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
  &lt;tbody&gt;&lt;tr&gt;
  &lt;th scope="row"&gt;&lt;a href="https://layer5io.github.io/academy-example/certifications/your-org-uuid/certification-1/"&gt;Certification-1&lt;/a&gt;&lt;/th&gt;
  &lt;td&gt;True&lt;/td&gt;
- &lt;td&gt;certification-id&lt;/td&gt;
- &lt;td&gt;⚠️&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://cloud.meshery.io/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;certification-id&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://cloud.meshery.io/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;⚠️&lt;/a&gt;&lt;/td&gt;
  &lt;/tr&gt;&lt;tr&gt;
  &lt;th scope="row"&gt;&lt;a href="https://layer5io.github.io/academy-example/challenges/your-org-uuid/challenge-1/"&gt;Challenge-1&lt;/a&gt;&lt;/th&gt;
  &lt;td&gt;True&lt;/td&gt;
- &lt;td&gt;challenge-id&lt;/td&gt;
- &lt;td&gt;⚠️&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://cloud.meshery.io/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;challenge-id&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://cloud.meshery.io/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;⚠️&lt;/a&gt;&lt;/td&gt;
  &lt;/tr&gt;&lt;tr&gt;
  &lt;th scope="row"&gt;&lt;a href="https://layer5io.github.io/academy-example/learning-paths/your-org-uuid/example-learning-path/"&gt;Example learning path&lt;/a&gt;&lt;/th&gt;
  &lt;td&gt;True&lt;/td&gt;
- &lt;td&gt;learning-path-id&lt;/td&gt;
- &lt;td&gt;⚠️&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://cloud.meshery.io/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;learning-path-id&lt;/a&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;a href="https://cloud.meshery.io/academy/instructors-console" target="_blank" rel="noopener" aria-label="Open Instructor Console"&gt;⚠️&lt;/a&gt;&lt;/td&gt;
  &lt;/tr&gt;&lt;/tbody&gt;
- &lt;/table&gt;&lt;p class="academy-toolkit__draft-note"&gt;
- Draft ID warnings do not block publishing, but fix missing or invalid IDs before publishing those draft pages.
- &lt;/p&gt;</description></item><item><title>Learning Path Exam</title><link>https://layer5io.github.io/academy-example/learning-paths/your-org-uuid/example-learning-path/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://layer5io.github.io/academy-example/learning-paths/your-org-uuid/example-learning-path/exam/</guid><description/></item><item><title>Lists</title><link>https://layer5io.github.io/academy-example/content-formatting-examples/markdown/lists/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://layer5io.github.io/academy-example/content-formatting-examples/markdown/lists/</guid><description>&lt;p&gt;Unordered:&lt;/p&gt;
+ &lt;/table&gt;&lt;blockquote&gt;
+ &lt;p&gt;Note: Draft ID warnings do not block publishing, but fix missing or invalid IDs before publishing draft pages.&lt;/p&gt;</description></item><item><title>Learning Path Exam</title><link>https://layer5io.github.io/academy-example/learning-paths/your-org-uuid/example-learning-path/exam/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://layer5io.github.io/academy-example/learning-paths/your-org-uuid/example-learning-path/exam/</guid><description/></item><item><title>Lists</title><link>https://layer5io.github.io/academy-example/content-formatting-examples/markdown/lists/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://layer5io.github.io/academy-example/content-formatting-examples/markdown/lists/</guid><description>&lt;p&gt;Unordered:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Liverpool F.C.&lt;/li&gt;
 &lt;li&gt;Chelsea F.C.&lt;/li&gt;
@@ -8860,7 +8856,7 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 
 
 &lt;div class="md__image"&gt;
- &lt;img id="[21 256 389 27 103 214]" src="https://layer5io.github.io/academy-example/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Spruce shoot close-up" 
+ &lt;img id="[158 467 469 435 96 301]" src="https://layer5io.github.io/academy-example/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Spruce shoot close-up" 
  class="md-image-responsive" /&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;Large images should always scale down and fit in the content container.&lt;/p&gt;
@@ -8872,7 +8868,7 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 
 
 &lt;div class="md__image"&gt;
- &lt;img id="[327 54 162 201 134 161]" src="https://layer5io.github.io/academy-example/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Large spruce shoot photo" 
+ &lt;img id="[361 181 493 147 54 354]" src="https://layer5io.github.io/academy-example/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Large spruce shoot photo" 
  class="md-image-responsive" /&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik Pedersen, CC-BY-SA.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Tables</title><link>https://layer5io.github.io/academy-example/content-formatting-examples/markdown/tables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://layer5io.github.io/academy-example/content-formatting-examples/markdown/tables/</guid><description>&lt;table&gt;
