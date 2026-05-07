@@ -37,5 +37,11 @@ questions:
     type: "short-answer" 
     marks: 2
     correct_answer: "kubectl"
+  - id: "q4"
+    text:
+      "True or False: Docker containers share the host operating system kernel."
+    type: "true-false"
+    marks: 1
+    answer: true
 type: "test"
 ---
