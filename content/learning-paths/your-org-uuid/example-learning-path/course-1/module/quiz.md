@@ -1,6 +1,11 @@
 ---
 title: "Module Quiz"
+id: "course-1-module-quiz"
+layout: "test"
 passPercentage: 70
+maxAttempts: 3
+timeLimit: 30
+numberOfQuestions: 3
 questions:
   - id: "q1"
     text: "Which Layer5 project is used for visual design in Kubernetes and cloud native infrastructure?"
