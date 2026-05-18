@@ -1,18 +1,20 @@
 
 # Layer5 Academy - Content Starter Template
 
-This repository is a starter template for creating custom learning paths and courses on the [Layer5 Academy](https://cloud.layer5.io/academy/overview). It provides the necessary file structure and a working example to help you get started quickly.
+This repository offers a starter template for creating your own, dedicated academy on the [Layer5 Academy](https://cloud.layer5.io/academy/overview) platform. This repository provides the necessary file structure and a working example to help you get started quickly. The guide below offers a quick start to setting up your own content repository, creating curricula, and previewing your academy locally.
 
-This guide will walk you through setting up your own content repository, creating courses, and previewing them locally.
+---
 
-> For more in-depth documentation, see the official [Layer5 Academy docs](https://docs.layer5.io/cloud/academy/).
+> For in-depth tutorials and customization examples, see the [Layer5 Academy docs](https://docs.layer5.io/cloud/academy/).
+
+---
 
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
-  * [**Hugo**](https://gohugo.io/getting-started/installing/) (extended version) （version 0.147.9）
-  * [**Go**](https://go.dev/doc/install) （version 1.12）
+  1. [**Go**](https://go.dev/doc/install) (use the version required by the root `go.mod` file)
+  2. [**Hugo**](https://gohugo.io/getting-started/installing/) (extended version, minimum `0.146.0` as defined in `hugo.yaml`)
 
 ## Getting Started
 
