@@ -38,7 +38,7 @@ competencies:
 
 # List of resource that are recommended to complete before taking the test
 # Not strictly enforced, but recommended
-prerequisite_knowledge:
+prerequisiteKnowledge:
   - title: "Learning Path"
     children:
       - title: "Cloud Computing Basics"
@@ -51,7 +51,7 @@ prerequisite_knowledge:
 
 
 # List of additional resources for further reading 
-related_resources:
+relatedResources:
   - title: "Documentation"
     children:
       - title: "Docs Portal"
@@ -70,7 +70,7 @@ related_resources:
         link: "https://www.youtube.com/c/example" 
 
 # Additional attributes about the test
-additional_attributes: 
+additionalAttributes: 
   - title: "Retake Policy"
     value: "3"
     description: "One Retake allowed after 30 days"
