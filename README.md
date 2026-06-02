@@ -1,18 +1,20 @@
 
 # Layer5 Academy - Content Starter Template
 
-This repository is a starter template for creating custom learning paths and courses on the [Layer5 Academy](https://cloud.layer5.io/academy/overview). It provides the necessary file structure and a working example to help you get started quickly.
+This repository offers a starter template for creating your own, dedicated academy on the [Layer5 Academy](https://cloud.layer5.io/academy/overview) platform. This repository provides the necessary file structure and a working example to help you get started quickly. The guide below offers a quick start to setting up your own content repository, creating curricula, and previewing your academy locally.
 
-This guide will walk you through setting up your own content repository, creating courses, and previewing them locally.
+---
 
-> For more in-depth documentation, see the official [Layer5 Academy docs](https://docs.layer5.io/cloud/academy/).
+> For in-depth tutorials and customization examples, see the [Layer5 Academy docs](https://docs.layer5.io/cloud/academy/).
+
+---
 
 ## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
-  * [**Hugo**](https://gohugo.io/getting-started/installing/) (extended version) （version 0.147.9）
-  * [**Go**](https://go.dev/doc/install) （version 1.12）
+  1. [**Go**](https://go.dev/doc/install) (use the version required by the root `go.mod` file)
+  2. [**Hugo**](https://gohugo.io/getting-started/installing/) (extended version, minimum `0.146.0` as defined in `hugo.yaml`)
 
 ## Getting Started
 
@@ -77,6 +79,34 @@ A high-level view of the structure looks like this:
   - **Create your folder structure** following the example's hierarchy.
   - **Add your lessons** as Markdown (`.md`) files inside the `content` directory of a course.
   - **Use frontmatter** at the top of your `_index.md` and lesson files to define titles, descriptions, and weights.
+
+### Add Assessments
+
+Assessment files use the Academy test layout and define their questions in Markdown frontmatter. Use short, stable IDs for questions and options; question IDs must be unique within one assessment, and option IDs must be unique within one question. The Academy theme converts these author-facing IDs into deterministic UUIDs in the generated JSON consumed by Layer5 Cloud.
+
+```yaml
+---
+title: "Assessment Example"
+id: "assessment-example"
+type: "test"
+layout: "test"
+passPercentage: 70
+maxAttempts: 3
+timeLimit: 30
+numberOfQuestions: 1
+questions:
+  - id: "q1"
+    text: "Academy content is authored in Markdown."
+    type: "true-false"
+    marks: 1
+    options:
+      - id: "true"
+        text: "True"
+        isCorrect: true
+      - id: "false"
+        text: "False"
+---
+```
 
 ### 5. Add Assets (Images & Videos)
 

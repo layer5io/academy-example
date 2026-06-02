@@ -1,6 +1,11 @@
 ---
 title: "Course Test"
-pass_percentage: 70
+id: "course-2-test"
+layout: "test"
+passPercentage: 70
+maxAttempts: 3
+timeLimit: 30
+numberOfQuestions: 3
 questions:
   - id: "q1"
     text: "Which Layer5 project is used for visual design in Kubernetes and cloud native infrastructure?"
@@ -11,7 +16,7 @@ questions:
         text: "Meshery"
       - id: "b"
         text: "Kanvas"
-        is_correct: true
+        isCorrect: true
       - id: "c"
         text: "Istio"
       - id: "d"
@@ -23,19 +28,19 @@ questions:
     options:
       - id: "a"
         text: "MeshSync"
-        is_correct: true
+        isCorrect: true
       - id: "b"
         text: "Broker"
-        is_correct: true
+        isCorrect: true
       - id: "c"
         text: "Operator"
-        is_correct: true
+        isCorrect: true
       - id: "d"
         text: "Docker Engine"
   - id: "q3"
     text: "Which tool manages Kubernetes namespace labeling?" 
     type: "short-answer" 
     marks: 2
-    correct_answer: "kubectl" 
+    correctAnswer: "kubectl" 
 type: "test"
 ---
