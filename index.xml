@@ -8456,7 +8456,7 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 
 
 &lt;div class="md__image"&gt;
- &lt;img id="[292 403 151 327 302 359]" src="https://layer5io.github.io/academy-example/examples/images/exoscale-icon.png" onclick="openModal(this.id)" alt="Rendered tab image" 
+ &lt;img id="[217 389 225 321 147 232]" src="https://layer5io.github.io/academy-example/examples/images/exoscale-icon.png" onclick="openModal(this.id)" alt="Rendered tab image" 
  class="md-image-responsive" /&gt;
 &lt;/div&gt;&lt;/p&gt;
 
@@ -8856,7 +8856,7 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 
 
 &lt;div class="md__image"&gt;
- &lt;img id="[105 67 324 338 411 394]" src="https://layer5io.github.io/academy-example/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Spruce shoot close-up" 
+ &lt;img id="[198 444 122 423 341 231]" src="https://layer5io.github.io/academy-example/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Spruce shoot close-up" 
  class="md-image-responsive" /&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;Large images should always scale down and fit in the content container.&lt;/p&gt;
@@ -8868,7 +8868,7 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 
 
 &lt;div class="md__image"&gt;
- &lt;img id="[280 451 223 283 47 207]" src="https://layer5io.github.io/academy-example/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Large spruce shoot photo" 
+ &lt;img id="[71 361 118 126 229 322]" src="https://layer5io.github.io/academy-example/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Large spruce shoot photo" 
  class="md-image-responsive" /&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik Pedersen, CC-BY-SA.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Tables</title><link>https://layer5io.github.io/academy-example/content-formatting-examples/markdown/tables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://layer5io.github.io/academy-example/content-formatting-examples/markdown/tables/</guid><description>&lt;table&gt;
