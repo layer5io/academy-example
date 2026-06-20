@@ -141,7 +141,38 @@ title="Video: Example" */>}}
 
 ### 6. Local Development
 
-To preview your content locally, run the Hugo server from the project root:
+This project includes a `Makefile` with helper targets to simplify local development and maintenance. Use the commands below as a quick reference.
+
+```bash
+# Install necessary tools and modules
+make setup
+
+# Start the local Hugo development server
+make site
+
+# Build the site for production
+make build
+
+# Build the site for local consumption with custom base URL
+make build-preview
+
+# Build production site output (CI)
+make build-production
+
+# Clean the Hugo cache and restart local setup
+make clean
+
+# Fix Markdown linting issues
+make lint-fix
+
+# Verify Go is installed before starting the local site
+make check-go
+
+# Update the academy-theme package version
+make theme-update
+```
+
+To preview your content locally, you can also run the Hugo server directly from the project root:
 
 ```bash
 hugo server
