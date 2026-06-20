@@ -18,42 +18,50 @@ include .github/build/Makefile.show-help.mk
 #----------------------------------------------------------------------------
 # Academy
 # ---------------------------------------------------------------------------
-.PHONY: setup build build-production build-preview site clean check-go theme-update
 
 BASE_URL ?=
 
-## ------------------------------------------------------------
-----LOCAL_BUILDS: Show help for available targets
-	
-## Local: Install site dependencies
+## Install site dependencies
 setup:
 	@if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then \
 		npm ci; \
 	else \
-		npm i; \
+		npm install; \
 	fi
 
-## Local: Build site for local consumption
-build:
-	BASE_URL="$(BASE_URL)" npm run build
+## Build and run site locally with draft and future content enabled.
+site: check-deps check-go
+	hugo server -D -F
+
+## Build site for local consumption
+build: check-deps
+	hugo --baseURL="$(BASE_URL)"
+
+## Build preview site with configured base URL
+build-preview: check-deps
+	hugo --baseURL="$(BASE_URL)"
 
 ## CI: Build production site output
-build-production:
-	BASE_URL="$(BASE_URL)" npm run build:production
+build-production: check-deps
+	hugo --baseURL="$(BASE_URL)" --minify -D --buildFuture
 
-## CI: Build preview site output and mark it non-indexable
-build-preview:
-	BASE_URL="$(BASE_URL)" npm run build:preview
-
-## Local: Build and run site locally with draft and future content enabled.
-site: check-go
-	hugo server -D -F
-	
 ## Empty build cache and run on your local machine.
 clean: 
 	hugo --cleanDestinationDir
 	make setup
 	make site
+
+## Fix Markdown linting issues
+lint-fix:
+	@echo "Running markdownlint-cli2 --fix..."
+	@npx --yes markdownlint-cli2 --fix "**/*.md" "#node_modules" "#public" "#resources"
+
+## Verify required commands and local dependencies are present.
+check-deps:
+	@echo "Checking if 'npm' and 'hugo' are available..."
+	@command -v npm > /dev/null || { echo "Error: 'npm' not found. Please install Node.js and npm."; exit 1; }
+	@command -v hugo > /dev/null || { echo "Error: 'hugo' not found. Please install Hugo."; exit 1; }
+	@echo "Dependencies check passed."
 
 ## ------------------------------------------------------------
 ----MAINTENANCE: Show help for available targets
@@ -67,3 +75,15 @@ check-go:
 theme-update:
 	echo "Updating to latest academy-theme..." && \
 	hugo mod get github.com/layer5io/academy-theme
+
+.PHONY: \
+	setup \
+	site \
+	build \
+	build-preview \
+	build-production \
+	clean \
+	lint-fix \
+	check-deps \
+	check-go \
+	theme-update
