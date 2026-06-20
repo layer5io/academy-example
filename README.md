@@ -150,10 +150,10 @@ make setup
 # Start the local Hugo development server
 make site
 
-# Build the site for production
+# Build the site for local consumption
 make build
 
-# Build the site for local consumption with custom base URL
+# Build the preview site with configured base URL
 make build-preview
 
 # Build production site output (CI)

@@ -35,15 +35,15 @@ site: check-deps check-go
 
 ## Build site for local consumption
 build: check-deps
-	BASE_URL="$(BASE_URL)" hugo build
+	hugo --baseURL="$(BASE_URL)"
 
 ## Build preview site with configured base URL
 build-preview: check-deps
 	hugo --baseURL="$(BASE_URL)"
 
 ## CI: Build production site output
-build-production:
-	BASE_URL="$(BASE_URL)" npm run build:production
+build-production: check-deps
+	hugo --baseURL="$(BASE_URL)" --minify -D --buildFuture
 
 ## Empty build cache and run on your local machine.
 clean: 
@@ -53,14 +53,15 @@ clean:
 
 ## Fix Markdown linting issues
 lint-fix:
-	@echo "Checking for markdownlint-cli2..."
-	@command -v markdownlint-cli2 > /dev/null || { \
-		echo "markdownlint-cli2 not found. Attempting to install globally..."; \
-		command -v npm > /dev/null || { echo "npm is not installed. Please install Node.js/npm and re-run 'make lint-fix'."; exit 1; }; \
-		npm install -g markdownlint-cli2; \
-	}
 	@echo "Running markdownlint-cli2 --fix..."
-	@markdownlint-cli2 --fix "**/*.md" "#node_modules" "#public" "#resources"
+	@npx --yes markdownlint-cli2 --fix "**/*.md" "#node_modules" "#public" "#resources"
+
+## Verify required commands and local dependencies are present.
+check-deps:
+	@echo "Checking if 'npm' and 'hugo' are available..."
+	@command -v npm > /dev/null || { echo "Error: 'npm' not found. Please install Node.js and npm."; exit 1; }
+	@command -v hugo > /dev/null || { echo "Error: 'hugo' not found. Please install Hugo."; exit 1; }
+	@echo "Dependencies check passed."
 
 ## ------------------------------------------------------------
 ----MAINTENANCE: Show help for available targets
@@ -83,5 +84,6 @@ theme-update:
 	build-production \
 	clean \
 	lint-fix \
+	check-deps \
 	check-go \
 	theme-update
