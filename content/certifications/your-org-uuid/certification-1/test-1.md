@@ -1,7 +1,7 @@
 ---
 title: "Exam 1"
 weight: 1
-pass_percentage: 70
+passPercentage: 70
 questions:
   - id: "q1"
     text: "Terms and Conditions and any Order shall be governed by the laws of: "
@@ -14,7 +14,7 @@ questions:
         text: "Germany"
       - id: "c"
         text: "Switzerland"
-        is_correct: true
+        isCorrect: true
 layout: "test"
 type: "test"
 ---
