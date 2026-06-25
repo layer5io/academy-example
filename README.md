@@ -14,7 +14,7 @@
 
 <p align="left">
   <a href="https://layer5.io/learn/academy"><img src="https://img.shields.io/badge/Layer5-Academy-00B39F?style=for-the-badge" alt="Layer5 Academy"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/layer5io/academy-theme?style=for-the-badge" alt="Apache 2.0 License"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/layer5io/academy-example?style=for-the-badge" alt="Apache 2.0 License"></a>
   <a href="https://gohugo.io/"><img src="https://img.shields.io/badge/Hugo-Framework-FF4088?logo=hugo&logoColor=white&style=for-the-badge" alt="Hugo"></a>
 </p>
 
