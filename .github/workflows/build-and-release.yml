@@ -29,6 +29,12 @@ jobs:
       - name: Checkout site
         uses: actions/checkout@v5
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
       - name: Setup Hugo Extended
         uses: peaceiris/actions-hugo@v3
         with:
