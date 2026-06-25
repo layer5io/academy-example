@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/readme/images/layer5-light-no-trim.svg"  width="40%" alt="Layer5 Logo">
+  <img src=".github/readme/images/layer5-light-no-trim.svg" width="40%" alt="Layer5 Logo">
 </p>
 
 <h1 align="left">
@@ -227,7 +227,7 @@ Contributors are expected to follow the [CNCF Code of Conduct](https://github.co
 <p>
 <a href="https://slack.layer5.io">
 
-<picture align="right">
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset=".github/readme/images/slack-dark-128.png">
   <source media="(prefers-color-scheme: light)" srcset=".github/readme/images/slack-128.png">
   <img src=".github/readme/images/slack-128.png"
