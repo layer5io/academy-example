@@ -208,3 +208,59 @@ Once your content is complete and tested locally:
 3.  Provide the URL to your content repository.
 
 A Layer5 administrator will then integrate your repository into the main Academy platform. After integration, your learning paths will be visible on the official [Layer5 Cloud site](https://cloud.layer5.io/academy/overview).
+
+
+## Community & Contributions
+
+We warmly welcome contributions of all kinds! Whether you're improving documentation, enhancing the example academy, fixing bugs, or proposing new features, your contributions help make the Academy ecosystem better for everyone.
+
+Before getting started, please review this project's [contributing guidelines][contrib].
+
+Contributors are expected to follow the [CNCF Code of Conduct](https://github.com/cncf/foundation/blob/master/code-of-conduct.md).
+
+### Helpful Resources
+
+* 📚 Academy [documentation][docs], [example][example], and [theme][theme]
+* 🎨 Layer5 [designs and wireframes][figma] in Figma ([open invite][figma-invite])
+* 👥 Connect through the [Layer5 Discussion Forum][forum] and [Layer5 Community Slack][slack]
+
+<p>
+<a href="https://slack.layer5.io">
+
+<picture align="right">
+  <source media="(prefers-color-scheme: dark)" srcset=".github/readme/images/slack-dark-128.png">
+  <source media="(prefers-color-scheme: light)" srcset=".github/readme/images/slack-128.png">
+  <img src=".github/readme/images/slack-128.png"
+       width="120"
+       align="right"
+       alt="Join Layer5 Slack">
+</picture>
+
+</a>
+
+<a href="https://layer5.io/community">
+  <img src=".github/readme/images/community.svg"
+       width="140"
+       align="left"
+       style="margin-right:10px;"
+       alt="Layer5 Community">
+</a>
+
+✔️ <strong>Join</strong> the Layer5 Slack Community.<br />
+✔️ <strong>Discuss</strong> in the Community Forum.<br />
+✔️ <strong>Explore</strong> the Community Handbook.<br />
+✔️ <strong>Start</strong> with the Newcomer's Guide.<br />
+
+</p>
+
+<br clear="both" />
+
+[contrib]: ./CONTRIBUTING.md
+[docs]: https://docs.layer5.io/cloud/academy/
+[example]: https://github.com/layer5io/academy-example/
+[theme]: https://github.com/layer5io/academy-theme/
+[figma]: https://www.figma.com/file/5ZwEkSJwUPitURD59YHMEN/Layer5-Designs
+[figma-invite]: https://www.figma.com/team_invite/redeem/GvB8SudhEOoq3JOvoLaoMs
+[forum]: https://discuss.layer5.io
+[slack]: https://slack.layer5.io
+
