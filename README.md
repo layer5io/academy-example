@@ -1,7 +1,22 @@
+<p align="center">
+  <img src=".github/readme/images/layer5-light-no-trim.svg"  width="40%" alt="Layer5 Logo">
+</p>
 
-# Layer5 Academy - Content Starter Template
+<h1 align="left">
+  <img
+    src=".github/readme/images/academy-layer5-light.png"
+    width="50"
+    alt="Academy"
+    align="left"
+  />
+ Layer5 Academy - Content Starter Template
+</h1>
 
-[![Hugo](https://img.shields.io/badge/Hugo-Framework-FF4088?logo=hugo&logoColor=white)](https://gohugo.io/)
+<p align="left">
+  <a href="https://layer5.io/learn/academy"><img src="https://img.shields.io/badge/Layer5-Academy-00B39F?style=for-the-badge" alt="Layer5 Academy"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/layer5io/academy-theme?style=for-the-badge" alt="Apache 2.0 License"></a>
+  <a href="https://gohugo.io/"><img src="https://img.shields.io/badge/Hugo-Framework-FF4088?logo=hugo&logoColor=white&style=for-the-badge" alt="Hugo"></a>
+</p>
 
 This repository offers a starter template for creating your own, dedicated academy on the [Layer5 Academy](https://cloud.layer5.io/academy/overview) platform. This repository provides the necessary file structure and a working example to help you get started quickly. The guide below offers a quick start to setting up your own content repository, creating curricula, and previewing your academy locally.
 
