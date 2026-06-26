@@ -1,6 +1,6 @@
 module github.com/layer5io/academy-example
 
-go 1.24.5
+go 1.26.4
 
 // Uncomment line below when testing changes to the academy theme
 replace github.com/layer5io/academy-theme v0.4.2 => ../academy-theme
@@ -9,6 +9,6 @@ replace github.com/FortAwesome/Font-Awesome v4.7.0+incompatible => github.com/Fo
 
 require (
 	github.com/FortAwesome/Font-Awesome v4.7.0+incompatible // indirect
-	github.com/layer5io/academy-theme v0.4.16 // indirect
+	github.com/layer5io/academy-theme v0.4.17 // indirect
 	github.com/twbs/bootstrap v5.3.7+incompatible // indirect
 )

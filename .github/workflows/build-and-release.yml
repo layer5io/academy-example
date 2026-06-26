@@ -29,11 +29,23 @@ jobs:
       - name: Checkout site
         uses: actions/checkout@v5
 
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+
       - name: Setup Hugo Extended
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.158.0'
           extended: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: make setup
