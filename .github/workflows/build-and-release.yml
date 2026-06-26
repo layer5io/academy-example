@@ -41,6 +41,12 @@ jobs:
           hugo-version: '0.158.0'
           extended: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
       - name: Install dependencies
         run: make setup
 
