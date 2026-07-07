@@ -15,74 +15,76 @@
 include .github/build/Makefile.core.mk
 include .github/build/Makefile.show-help.mk
 
-#----------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Academy
 # ---------------------------------------------------------------------------
 
-BASE_URL ?=
-
-## Install site dependencies
-setup:
-	@if [ -f package-lock.json ] || [ -f npm-shrinkwrap.json ]; then \
-		npm ci; \
-	else \
-		npm install; \
-	fi
-
-## Build and run site locally with draft and future content enabled.
-site: check-deps check-go
-	hugo server -D -F
-
-## Build site for local consumption
-build: check-deps
-	hugo --baseURL="$(BASE_URL)"
-
-## Build preview site with configured base URL
-build-preview: check-deps
-	hugo --baseURL="$(BASE_URL)"
-
-## CI: Build production site output
-build-production: check-deps
-	hugo --baseURL="$(BASE_URL)" --minify -D --buildFuture
-
-## Empty build cache and run on your local machine.
-clean: 
-	hugo --cleanDestinationDir
-	make setup
-	make site
-
-## Fix Markdown linting issues
-lint-fix:
-	@echo "Running markdownlint-cli2 --fix..."
-	@npx --yes markdownlint-cli2 --fix "**/*.md" "#node_modules" "#public" "#resources"
+# ---------------------------------------------------------------------------
+# MAINTENANCE: Show help for available targets
+# ---------------------------------------------------------------------------
 
 ## Verify required commands and local dependencies are present.
 check-deps:
-	@echo "Checking if 'npm' and 'hugo' are available..."
+	@echo "Checking if 'npm' and local 'hugo' binary are present..."
 	@command -v npm > /dev/null || { echo "Error: 'npm' not found. Please install Node.js and npm."; exit 1; }
-	@command -v hugo > /dev/null || { echo "Error: 'hugo' not found. Please install Hugo."; exit 1; }
+	@test -x node_modules/.bin/hugo || { echo "Error: Hugo binary not found in node_modules. Please run 'make setup' first."; exit 1; }
 	@echo "Dependencies check passed."
 
-## ------------------------------------------------------------
-----MAINTENANCE: Show help for available targets
-
+## Validate Go is installed
 check-go:
 	@echo "Checking if Go is installed..."
-	@command -v go > /dev/null || (echo "Go is not installed. Please install it before proceeding."; exit 1)
+	@command -v go > /dev/null || { echo "Go is not installed. Please install it before proceeding."; exit 1; }
 	@echo "Go is installed."
 
 ## Update the academy-theme package to latest version
-theme-update:
-	echo "Updating to latest academy-theme..." && \
-	hugo mod get github.com/layer5io/academy-theme
+theme-update: check-go check-deps
+	@echo "Updating to latest academy-theme..."
+	npm run update:theme
+
+#----------------------------------------------------------------------------
+# LOCAL_BUILDS: Show help for available targets
+#----------------------------------------------------------------------------
+
+## Install site dependencies
+setup:
+	npm install
+
+## Build site for local consumption
+build: check-go check-deps
+	npm run build:production
+
+## Build site for local consumption
+build-preview: check-go check-deps
+	npm run build:preview
+
+## Build and run site locally with draft and future content enabled.
+site: check-go check-deps
+	npm run site
+
+## Build and run site locally
+serve: check-go check-deps
+	npm run serve
+
+## Empty build cache and run on your local machine.
+clean:
+	npm run clean
+
+## Format code using Prettier
+format:
+	npm run format
+
+## Fix Markdown linting issues
+lint-fix:
+	npm run lint:fix
 
 .PHONY: \
 	setup \
-	site \
 	build \
 	build-preview \
-	build-production \
+	serve \
+	site \
 	clean \
+	format \
 	lint-fix \
 	check-deps \
 	check-go \
