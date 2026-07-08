@@ -43,8 +43,14 @@ jobs:
       - name: Setup site dependencies
         run: make setup
 
+      # Production build. The GitHub Pages base URL is per-fork, so it is passed
+      # here directly rather than baked into config or the standardized scripts.
+      # Mirrors 'npm run build:production' (hugo --cleanDestinationDir --minify --gc),
+      # with --baseURL added for the Pages deploy.
       - name: Build site
-        run: make build-production BASE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+        run: |
+          BASE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          hugo --cleanDestinationDir --gc --minify --baseURL "${BASE_URL}"
 
       - name: Prepare Pages output
         run: touch public/.nojekyll

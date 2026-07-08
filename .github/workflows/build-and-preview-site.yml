@@ -63,11 +63,26 @@ jobs:
         if: github.event.action != 'closed'
         run: make setup
 
+      # Preview build. The GitHub Pages preview URL is a per-PR subpath, so it is
+      # passed here directly rather than via the standardized scripts (whose
+      # build:preview targets Netlify's DEPLOY_PRIME_URL, not GitHub Pages).
+      # Mirrors 'npm run build:preview' (hugo --cleanDestinationDir -e dev -DFE
+      # --minify), with the computed --baseURL for the Pages subpath.
       - name: Build PR preview
         if: github.event.action != 'closed'
         run: |
-          make build-preview BASE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.pull_request.number }}/"
+          PR_BASE_URL="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr-preview/pr-${{ github.event.pull_request.number }}/"
+          hugo --cleanDestinationDir -e dev -DFE --minify --baseURL "${PR_BASE_URL}"
           touch public/.nojekyll
+
+      # Preview URLs are public GitHub Pages. Mark the whole deployment
+      # non-indexable so search engines don't crawl preview content or let it
+      # compete with production. Runs on the built public/ output.
+      - name: Make preview non-indexable
+        if: github.event.action != 'closed'
+        run: |
+          printf 'User-agent: *\nDisallow: /\n' > public/robots.txt
+          find public -name '*.html' -exec perl -0pi -e 's|<meta name=robots content="index, follow">|<meta name=robots content="noindex, nofollow">|g; s|<meta name="robots" content="index, follow">|<meta name="robots" content="noindex, nofollow">|g; s|</head>|<meta name="robots" content="noindex, nofollow"></head>|i unless /<meta[^>]+name="?robots"?[^>]+noindex, nofollow/i' {} +
 
       - name: Deploy PR preview
         if: github.event.action != 'closed'
