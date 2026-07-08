@@ -63,11 +63,10 @@ jobs:
         if: github.event.action != 'closed'
         run: make setup
 
-      # Preview build. The GitHub Pages preview URL is a per-PR subpath, so it is
-      # passed here directly rather than via the standardized scripts (whose
-      # build:preview targets Netlify's DEPLOY_PRIME_URL, not GitHub Pages).
-      # Mirrors 'npm run build:preview' (hugo --cleanDestinationDir -e dev -DFE
-      # --minify), with the computed --baseURL for the Pages subpath.
+      # The GitHub Pages preview URL is a per-PR subpath, so it is passed here
+      # directly rather than via the standardized scripts (whose build:preview
+      # targets Netlify's DEPLOY_PRIME_URL, not GitHub Pages).
+      # Mirrors 'npm run build:preview' (hugo --cleanDestinationDir -e dev -DFE --minify).
       - name: Build PR preview
         if: github.event.action != 'closed'
         run: |
@@ -76,8 +75,7 @@ jobs:
           touch public/.nojekyll
 
       # Preview URLs are public GitHub Pages. Mark the whole deployment
-      # non-indexable so search engines don't crawl preview content or let it
-      # compete with production. Runs on the built public/ output.
+      # non-indexable so search engines don't crawl preview content.
       - name: Make preview non-indexable
         if: github.event.action != 'closed'
         run: |
