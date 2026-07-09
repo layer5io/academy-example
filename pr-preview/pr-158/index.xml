@@ -8456,7 +8456,7 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 
 
 &lt;div class="md__image"&gt;
- &lt;img id="[286 4 375 308 230 209]" src="/examples/images/exoscale-icon.png" onclick="openModal(this.id)" alt="Rendered tab image" 
+ &lt;img id="[213 244 197 28 92 499]" src="/examples/images/exoscale-icon.png" onclick="openModal(this.id)" alt="Rendered tab image" 
  class="md-image-responsive" /&gt;
 &lt;/div&gt;&lt;/p&gt;
 
@@ -8856,7 +8856,7 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 
 
 &lt;div class="md__image"&gt;
- &lt;img id="[465 428 244 96 357 255]" src="/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Spruce shoot close-up" 
+ &lt;img id="[485 366 447 169 180 85]" src="/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Spruce shoot close-up" 
  class="md-image-responsive" /&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;Large images should always scale down and fit in the content container.&lt;/p&gt;
@@ -8868,7 +8868,7 @@ It supports &lt;strong&gt;Markdown&lt;/strong&gt; cells, code cells with syntax 
 
 
 &lt;div class="md__image"&gt;
- &lt;img id="[229 44 69 85 108 224]" src="/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Large spruce shoot photo" 
+ &lt;img id="[500 110 342 139 114 397]" src="/assets/icons/layer5-academy-icon.svg" onclick="openModal(this.id)" alt="Large spruce shoot photo" 
  class="md-image-responsive" /&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The photo above of the Spruce Picea abies shoot with foliage buds: Bjørn Erik Pedersen, CC-BY-SA.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Tables</title><link>/content-formatting-examples/markdown/tables/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/content-formatting-examples/markdown/tables/</guid><description>&lt;table&gt;
