@@ -43,7 +43,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
-          cache: true
+          cache: false
 
       - name: Setup Hugo Extended
         if: github.event.action != 'closed'
@@ -54,10 +54,9 @@ jobs:
 
       - name: Setup Node
         if: github.event.action != 'closed'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '22'
 
       - name: Setup site dependencies
         if: github.event.action != 'closed'
