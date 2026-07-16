@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Checkout PR code
         if: github.event.action != 'closed'
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.sha }}
@@ -33,7 +33,7 @@ jobs:
 
       - name: Checkout for cleanup
         if: github.event.action == 'closed'
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: gh-pages
           fetch-depth: 0
@@ -54,7 +54,7 @@ jobs:
 
       - name: Setup Node
         if: github.event.action != 'closed'
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: '22'
 
