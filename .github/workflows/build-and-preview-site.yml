@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Checkout PR code
         if: github.event.action != 'closed'
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.event.pull_request.head.sha }}
@@ -33,7 +33,7 @@ jobs:
 
       - name: Checkout for cleanup
         if: github.event.action == 'closed'
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: gh-pages
           fetch-depth: 0
@@ -43,7 +43,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
-          cache: true
+          cache: false
 
       - name: Setup Hugo Extended
         if: github.event.action != 'closed'
@@ -54,10 +54,9 @@ jobs:
 
       - name: Setup Node
         if: github.event.action != 'closed'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: '22'
 
       - name: Setup site dependencies
         if: github.event.action != 'closed'
