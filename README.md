@@ -31,7 +31,9 @@ This repository offers a starter template for creating your own, dedicated acade
 Before you begin, ensure you have the following installed on your system:
 
   1. [**Go**](https://go.dev/doc/install) (use the version required by the root `go.mod` file)
-  2. [**Hugo**](https://gohugo.io/getting-started/installing/) (extended version, minimum `0.146.0` as defined in `hugo.yaml`)
+  2. [**Node.js / npm**](https://nodejs.org/) (LTS recommended)
+
+> Hugo Extended is installed locally by `make setup` and does not need to be installed globally.
 
 ## Getting Started
 
@@ -64,7 +66,7 @@ First, create a copy of this repository under your own GitHub account.
 
 ### 3. Configure Your Organization Directories
 
-The Academy platform uses an **Organization UID** to keep content separate and secure. You must get this ID from the Layer5 CLoud before proceeding.
+The Academy platform uses an **Organization UID** to keep content separate and secure. You must get this ID from the Layer5 Cloud before proceeding.
 
 Once you have your UID, rename the placeholder directories:
 
@@ -127,30 +129,35 @@ questions:
 
 ### 5. Add Assets (Images & Videos)
 
-Enhance your course with images and other visual aids. To ensure compatibility with the multi-tenant Academy platform, **do not use standard Markdown image links**. Instead, use the `usestatic` shortcode, which generates the correct, tenant-aware path for your assets.
+Enhance your course with images and other visual aids using the **Page Bundling** method, which keeps assets alongside the content that references them and ensures they resolve correctly for each organization.
 
 **How to Add an Image**
 
-1.  Place your image file (e.g., `hugo-logo.png`) in your scoped static directory:
+1.  Place your image file directly in the same directory as your Markdown content:
 
-    ```text
-    static/<your-organization-uid>/images/hugo-logo.png
-    ```
-2.  In your `lesson-1.md` file, embed the image using the `usestatic` shortcode. The `path` is relative to your scoped static folder: 
+```text
+    content/learning-paths/<your-organization-uid>/
+    └── <your-course>/
+        └── <your-module>/
+            ├── _index.md
+            └── hugo-logo.png
+```
 
-    ```text
-    ![The Hugo Logo]({{</* usestatic path="images/hugo-logo.png" */>}})
-    ```
+2.  In your `lesson-1.md` file, reference the image using standard Markdown syntax:
 
-Then the system will automatically convert this into the correct URL when building the site.
+```markdown
+    ![The Hugo Logo](hugo-logo.png)
+```
+
+> **Note:** The `usestatic` shortcode is **deprecated** and should not be used in new content. Use the Page Bundling method above.
 
 **How to Add a Video**
 
 ```text
-{{</* card 
+{{</* card
 title="Video: Example" */>}}
 <video width="100%" height="100%" controls>
-    <source src="https://exmaple.mp4" type="video/mp4">
+    <source src="https://example.com/your-video.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
 {{</* /card */>}}
@@ -164,23 +171,32 @@ This project includes a `Makefile` with helper targets to simplify local develop
 # Install necessary tools and modules
 make setup
 
-# Start the local Hugo development server
+# Start the local Hugo development server with live reload
 make site
 
-# Build the site for local consumption
+# Serve the site once with the file watcher off (no live reload)
+make serve
+
+# Build the site locally with draft and future content enabled
 make build
 
-# Build the preview site with configured base URL
+# Build the site for a deploy preview (honors DEPLOY_PRIME_URL)
 make build-preview
 
-# Build production site output (CI)
+# Build the site for production (pass BASE_URL=... to set the base URL)
 make build-production
 
-# Clean the Hugo cache and restart local setup
+# Empty the build cache, reinstall dependencies, and run the site locally
 make clean
+
+# Check Markdown for linting issues
+make lint
 
 # Fix Markdown linting issues
 make lint-fix
+
+# Check internal links in the built site
+make check-links
 
 # Verify Go is installed before starting the local site
 make check-go
@@ -189,13 +205,7 @@ make check-go
 make theme-update
 ```
 
-To preview your content locally, you can also run the Hugo server directly from the project root:
-
-```bash
-hugo server
-```
-
-This will start a local server. You can view your content and check for formatting issues before publishing.
+Run `make site` to view your content and check for formatting issues before publishing.
 
 > The local preview uses basic styling. Full Academy branding and styles will be applied after your content is integrated into the cloud platform.
 
@@ -263,4 +273,3 @@ Contributors are expected to follow the [CNCF Code of Conduct](https://github.co
 [figma-invite]: https://www.figma.com/team_invite/redeem/GvB8SudhEOoq3JOvoLaoMs
 [forum]: https://discuss.layer5.io
 [slack]: https://slack.layer5.io
-
