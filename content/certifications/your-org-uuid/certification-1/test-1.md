@@ -1,5 +1,5 @@
 ---
-title: "Exam 1"
+title: "Exam 1 (Preview Test)"
 weight: 1
 passPercentage: 70
 questions:
